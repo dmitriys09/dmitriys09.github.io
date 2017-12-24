@@ -1,0 +1,80 @@
+<html>
+    <head>
+        <script>
+            var default_color;
+            function mouseIn(aid) {
+                
+              default_color = document.getElementById(aid).style.background;
+              document.getElementById(aid).style.background = "white";
+            }
+            function mouseOut(aid) {
+              document.getElementById(aid).style.background = default_color;
+            }
+            function home(){top.frames['content'].location.href = 'home_content.html';}
+            function dos(){top.frames['content'].location.href = 'dos.html';}
+            function history(){top.frames['content'].location.href = 'history.html';}
+            function nt(){top.frames['content'].location.href = 'NT.html';}
+            function x(){top.frames['content'].location.href = '9X.html';}
+        </script>
+        <style>
+            img {
+                 border: 1px solid #e2e3e7;
+                 position: absolute;
+                 left:430px;
+                }
+            a.but{
+                -webkit-user-select: none;
+                position:absolute;
+                width: 40px;
+                height: 30px;
+                background: #12ade9;
+                padding: .2em 1.2em;
+                outline: none;
+                border: 1px solid #4c4c4c;
+                border-radius: 1px;
+                transition: all .218s ease 0s;  
+                font-family: Arial, Helvetica, sans-serif;
+                color: #4c4c4c;
+            }
+            font{
+                font-size: 80%;
+                align-content: left;
+            }
+            a.but img{
+                border: none;
+                top:3px;
+                left:26px;
+            }
+            ul.hr {
+                margin: 0; /* Обнуляем значение отступов */
+                padding: 4px; /* Значение полей */
+            }
+            ul.hr li {
+                display: inline; /* Отображать как строчный элемент */
+                margin-right: 80px; /* Отступ слева */
+            }
+       </style>
+    </head>
+<body>
+    <p align="center">
+    <ul class="hr" align="center">   
+        <li><a id="1" class="but" onMouseOver="mouseIn(1)" onMouseOut="mouseOut(1)" 
+            onclick="home()" target="content">
+            <img src="img/home_button.png" width="30" lenght="10" border="0"/></a></li>
+        <li><a id="2" class="but" onMouseOver="mouseIn(2)"
+            onMouseOut="mouseOut(2)" onclick="dos()" target="content">
+            <img src="img/Dos.png" width="30" lenght="10" border="0" style="top:8px"/></a></li>
+        <li><a id="3" class="but" onMouseOver="mouseIn(3)" 
+            onMouseOut="mouseOut(3)" onclick="history()" target="content">
+            <img src="img/hist.png" width="30" lenght="10" border="0"/></a></li>
+        <li><a id="4" class="but" onMouseOver="mouseIn(4)" 
+            onMouseOut="mouseOut(4)" onclick="nt()" target="content">
+            <img src="img/nt.png" width="30" lenght="10" border="0" style="top:6px"/></a></li>
+        <li><a id="5" class="but" onMouseOver="mouseIn(5)" 
+            onMouseOut="mouseOut(5)" onclick="x()" target="content">
+            <img src="img/1.png" width="30" lenght="10" border="0" style="top:3px"/></a></li>
+
+    </ul>
+    </p>
+</body>
+</html>
