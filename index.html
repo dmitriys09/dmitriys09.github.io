@@ -1,0 +1,48 @@
+<html>
+<head>
+    <script>
+        var default_color;
+        function mouseIn() {
+            default_color = document.getElementById('but').style.background;
+            document.getElementById('but').style.background = "white";
+            }
+        function mouseOut() {
+            document.getElementById('but').style.background = default_color;
+        }
+        function changeframe(){top.frames['content'].location.href = 'content2.html';}
+    </script>
+    <style>
+        div {
+            min-width: 960px;
+            max-width: 75%;
+            margin: 0 auto;
+            padding: 0;
+            }
+        img { border: 1px solid #e2e3e7;}
+        a{
+            position:absolute;
+            width: 40 px;
+            height: 29px;
+            top:9px;
+            left:30%;
+            background: #12ade9;
+            padding: .2em 1.2em;
+            outline: none;
+            border: 1px solid rgba(0,0,0,.1);
+            border-radius: 2px;
+            transition: all .218s ease 0s;
+        }
+        a img{ border: none;}            
+    </style>
+            <div>
+                    <frameset rows="24%, 10%,66%" frameborder="0" border="0">
+                        <frame src="assets/top.html" name="top">
+                        <frame src="assets/button_line.html" name="but">
+                        <frame src="assets/home_content.html" name="content" scrolling="no">
+                    </frameset>
+                </div>
+</head>
+<body> 
+    
+</body>
+</html>
